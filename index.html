@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кот и мышки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="game-container">
+    <h1>Голодный кот</h1>
+
+    <p class="goal" id="goalText">Уровень 1: 🟠 HTML | Поймай 3 мышки</p>
+
+    <div class="cat-area">
+      <div class="cat">😸</div>
+      <div class="progress">Уровень: <span id="levelCount">1</span> / 3</div>
+      <div class="progress">Мышек на уровне: <span id="caughtCount">0</span> / <span id="targetCount">3</span>
+      </div>
+      <div class="progress">Очки: <span id="scoreCount">0</span></div>
+    </div>
+
+    <div class="mice-grid" id="miceGrid">
+      <!-- Здесь будут мышки -->
+    </div>
+
+    <div id="message"></div>
+    <button id="resetButton" type="button">🔁 Начать заново</button>
+    <button id="toggleLeaderboardButton" type="button">Показать рейтинг</button>
+
+    <section class="leaderboard hidden" id="leaderboardSection">
+      <h2>Рейтинг победителей</h2>
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Место</th>
+            <th>Игрок</th>
+            <th>Очки</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+      <p class="leaderboard-empty" id="leaderboardEmpty">Победителей пока нет. Пройди все уровни и попади в
+        рейтинг.</p>
+      <button class="clear-rating-button" id="clearRatingButton" type="button">Очистить рейтинг</button>
+    </section>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
